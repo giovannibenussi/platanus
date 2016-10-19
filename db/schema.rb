@@ -10,13 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161019224920) do
+ActiveRecord::Schema.define(version: 20161019232650) do
 
   create_table "cuentas", force: :cascade do |t|
     t.string   "direccion",  limit: 44
     t.integer  "saldo"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
+  end
+
+  create_table "transacciones", force: :cascade do |t|
+    t.integer  "cuenta_id"
+    t.text     "descripcion"
+    t.integer  "monto"
+    t.boolean  "instruccion"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end

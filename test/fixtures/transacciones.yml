@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cuenta_id: 1
+  descripcion: MyText
+  monto: 1
+  instruccion: false
+
+two:
+  cuenta_id: 1
+  descripcion: MyText
+  monto: 1
+  instruccion: false
