@@ -3,7 +3,7 @@ app = angular.module('platanus', [
     'restangular',
 ])
 
-app.config(($stateProvider, $urlRouterProvider) ->
+app.config(($stateProvider, $urlRouterProvider, RestangularProvider) ->
     index = {
         name: 'index',
         url: '/',

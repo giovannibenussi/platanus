@@ -2,7 +2,7 @@ var app;
 
 app = angular.module('platanus', ['ui.router', 'restangular']);
 
-app.config(function($stateProvider, $urlRouterProvider) {
+app.config(function($stateProvider, $urlRouterProvider, RestangularProvider) {
   var cuentas, index;
   index = {
     name: 'index',
