@@ -1,7 +1,9 @@
+{{ error }}
+
 <form>
     <div class="form-group">
         <label>Cuenta</label>
-        <input type="password" class="form-control" ng-model="nueva_cuenta.password">
+        <input type="password" class="form-control" ng-model="nueva_cuenta.cuenta_id">
     </div>
     <div class="form-group">
         <label>Descripción</label>
@@ -10,8 +12,8 @@
     <div class="form-group">
         <label>Tipo</label>
         <select ng-model="nueva_cuenta.instruccion">
-            <option value="retiro">Retiro</option>
-            <option value="deposito">Deposito</option>
+            <option value="1">Retiro</option>
+            <option value="0">Deposito</option>
         </select>
     </div>
     <div class="form-group">

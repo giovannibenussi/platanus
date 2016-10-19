@@ -4,15 +4,28 @@ app = angular.module('platanus');
 
 app.controller('TransaccionNewController', [
   '$scope', 'Restangular', function($scope, Restangular) {
+    var Transacciones;
     $scope.direccion = 'Hello world';
     $scope.nueva_cuenta = {
-      instruccion: 'retiro'
+      instruccion: 0
     };
-    Restangular.one('cuentas', 1234).get().then(function(cuenta) {
-      return $scope.cuenta = cuenta;
-    });
+    Transacciones = Restangular.all('transacciones');
     return $scope.guardarTransaccion = function() {
-      return console.log($scope.nueva_cuenta);
+      console.log($scope.nueva_cuenta);
+      return Transacciones.post($scope.nueva_cuenta).then(function(response) {
+        console.log(response);
+        console.log("Cuenta guardada correctamente");
+        $scope.error = '';
+        if (!response.success) {
+          if (response.error === 'ACCOUNT_DOES_NOT_EXISTS') {
+            return $scope.error = 'La cuenta indicada no existe';
+          } else {
+            return $scope.error = 'Ha ocurrido un error al guardar la transacción';
+          }
+        }
+      }, function() {
+        return $scope.error = 'Ha ocurrido un error al guardar la transacción';
+      });
     };
   }
 ]);
