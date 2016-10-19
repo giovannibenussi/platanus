@@ -1,5 +1,6 @@
 app = angular.module('platanus', [
     'ui.router',
+    'restangular',
 ])
 
 app.config(($stateProvider, $urlRouterProvider) ->

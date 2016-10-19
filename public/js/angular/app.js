@@ -1,6 +1,6 @@
 var app;
 
-app = angular.module('platanus', ['ui.router']);
+app = angular.module('platanus', ['ui.router', 'restangular']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
   var cuentas, index;
