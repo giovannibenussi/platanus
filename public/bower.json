@@ -1,0 +1,22 @@
+{
+  "name": "platanus",
+  "homepage": "https://github.com/giovannibenussi/platanus",
+  "authors": [
+    "Giovanni Benussi <giovanni.benussi@usach.cl>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-router": "^0.3.1"
+  }
+}
