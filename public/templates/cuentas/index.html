@@ -1,3 +1,16 @@
 <h1>Cuenta {{ direccion }}</h1>
 
 Saldo: {{ cuenta.saldo }}
+
+<h2>Transacciones</h2>
+
+<table class="table">
+    <tr>
+        <th>Descripción</th>
+        <th>Monto</th>
+    </tr>
+    <tr ng-repeat="transaccion in cuenta.transacciones">
+        <td>{{ transaccion.descripcion }}</td>
+        <td>{{ transaccion.monto|currency:undefined:0 }}</td>
+    </tr>
+</table>
