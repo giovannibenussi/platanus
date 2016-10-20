@@ -1,3 +1,10 @@
+# Rutas de la aplicación
+Luego de instalar la aplicación y correr el servidor (paso siguiente), podrá visitar las siguientes rutas:
+
+* *http://localhost:3000/index.html#/cuentas/:direccion* Nos permite ver la cuenta con direccion :direccion
+* *http://localhost:3000/index.html#/transaccion/nueva* Nos permite crear una transacción para la que indiquemos en el formulario
+
+
 # Instalación
 ## Instalar rails con rvm:
 Si no se cuenta con rails, seguir las instrucciones para [instalarlo con rvm](https://rvm.io/rvm/install):
